@@ -12,11 +12,27 @@
 <p>Navigation</p><a href="/">Parties</a>
 <a href="/review-page">Review Options</a>
 <h1>Pizza Options</h1>
-	<ol>
-		<c:forEach var="partyOption" items="${partyOption}">
-			<li><b>Name:</b>${partyOption.name} <b>Type:</b>${partyOption.description} <b>Votes:</b>${partyOption.votes}</li>
-		</c:forEach>
-	</ol>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Votes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="partyoption" items="${partyoption}">
+				<tr>
+					<td>${partyoption.name}</td>
+					<td>${partyoption.description}</td>
+					<td>${partyoption.votes}</td>
+					<td><a href="/addVotes?id=${partyoption.id}">Vote</a></td>
+				</tr>
+			</c:forEach>
+		
+		</tbody>
+	
+	</table>
 	
 	<h2>Add an option</h2>
 	<p><label>Name: </label><input name="name" /></p>

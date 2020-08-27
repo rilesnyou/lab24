@@ -14,7 +14,19 @@ public class PartyOption {
 	private Long id;
 	private String name;
 	private String description;
-	private int votes;
+	private Integer votes=0;
+	
+	public PartyOption() {
+		super();
+	}
+	
+	public PartyOption(Long id, String name, String description, Integer votes) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.votes = votes;
+	}
 
 	public Long getId() {
 		return id;
@@ -40,11 +52,11 @@ public class PartyOption {
 		this.description = description;
 	}
 
-	public int getVotes() {
+	public Integer getVotes() {
 		return votes;
 	}
 
-	public void setVotes(int votes) {
+	public void setVotes(Integer votes) {
 		this.votes = votes;
 	}
 

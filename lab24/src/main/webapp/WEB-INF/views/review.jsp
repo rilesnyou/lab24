@@ -14,11 +14,25 @@
 
 <h1>Pizza Options</h1>
 
-	<ol>
-		<c:forEach var="partyOption" items="${partyOption}">
-			<li><b>Name:</b>${partyOption.name} <b>Type:</b>${partyOption.description} <b>Votes:</b>${partyOption.votes}</li>
-		</c:forEach>
-	</ol>
-
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Votes</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="partyoption" items="${partyoption}">
+				<tr>
+					<td>${partyoption.name}</td>
+					<td>${partyoption.description}</td>
+					<td>${partyoption.votes}</td>
+				</tr>
+			</c:forEach>
+		
+		</tbody>
+	
+	</table>
 </body>
 </html>
